@@ -107,8 +107,8 @@
     const sorters = {
       "price-asc": (a, b) => a.price - b.price,
       "price-desc": (a, b) => b.price - a.price,
-      rating: (a, b) => b.rating - a.rating || b.reviews - a.reviews,
-      featured: (a, b) => b.reviews * b.rating - a.reviews * a.rating,
+      rating: (a, b) => (b.rating || 0) - (a.rating || 0) || (b.reviews || 0) - (a.reviews || 0),
+      featured: (a, b) => (b.badge === "Mais vendida") - (a.badge === "Mais vendida") || PRODUCTS.indexOf(a) - PRODUCTS.indexOf(b),
     };
     return list.sort(sorters[state.sort]);
   }
@@ -129,7 +129,7 @@
         <span class="card__cat">${catName(p.category)}</span>
         <h3 class="card__title"><button data-view="${p.id}">${esc(p.name)}</button></h3>
         <p class="card__short">${esc(p.short)}</p>
-        <div class="rating"><span class="rating__stars">${stars(p.rating)}</span>${p.rating.toFixed(1)} (${p.reviews})</div>
+        ${p.rating ? `<div class="rating"><span class="rating__stars">${stars(p.rating)}</span>${p.rating.toFixed(1)} (${p.reviews})</div>` : ""}
         <div class="price">
           ${p.oldPrice ? `<span class="price__old">${money(p.oldPrice)}</span>` : ""}
           <span class="price__now">${money(p.price)}</span>
@@ -268,7 +268,7 @@
         <div class="pdp__info">
           <span class="card__cat">${catName(p.category)}</span>
           <h3 id="modalTitle">${esc(p.name)}</h3>
-          <div class="rating"><span class="rating__stars">${stars(p.rating)}</span>${p.rating.toFixed(1)} · ${p.reviews} avaliações</div>
+          ${p.rating ? `<div class="rating"><span class="rating__stars">${stars(p.rating)}</span>${p.rating.toFixed(1)} · ${p.reviews} avaliações</div>` : ""}
           <div class="price">
             ${p.oldPrice ? `<span class="price__old">${money(p.oldPrice)}</span>` : ""}
             <span class="price__now">${money(p.price)}</span>
@@ -276,7 +276,7 @@
             <span class="pdp__installments">ou 6x de ${money(p.price / 6)} sem juros</span>
           </div>
           <p>${esc(p.description)}</p>
-          ${p.colors.length > 1 ? `<div class="swatches"><span class="label">Cor:</span>${p.colors.map((c, i) => `<button type="button" class="swatch${i === 0 ? " is-active" : ""}" style="background:${c}" aria-label="Cor ${i + 1}" data-swatch></button>`).join("")}</div>` : ""}
+          ${p.colors?.length > 1 ? `<div class="swatches"><span class="label">Cor:</span>${p.colors.map((c, i) => `<button type="button" class="swatch${i === 0 ? " is-active" : ""}" style="background:${c}" aria-label="Cor ${i + 1}" data-swatch></button>`).join("")}</div>` : ""}
           ${spp ? `<p style="font-size:14px">🎯 <b>Indicado pra:</b> ${spp}</p>` : ""}
           <table class="specs">${specs}</table>
           <div class="pdp__buy">

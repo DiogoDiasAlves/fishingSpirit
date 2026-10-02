@@ -39,14 +39,13 @@ public/                           tudo que vai pro ar
   js/products.js                  catálogo: produtos, categorias e espécies
   js/app.js                       filtros, carrinho, modal e checkout
   assets/img/logo.png             logo com fundo transparente
-  assets/img/products/*.svg       imagens ilustrativas dos produtos
-scripts/generate-product-images.mjs  gera as ilustrações
+  assets/img/products/*.webp      fotos dos produtos (800×800, fundo branco)
 wrangler.jsonc                    configuração da Cloudflare
 ```
 
 ## Editar produtos
 
-Tudo fica em `public/js/products.js`. Para trocar a imagem fictícia pela foto real, coloque a foto em `public/assets/img/products/` e mude o campo `image` do produto.
+Tudo fica em `public/js/products.js`. Nomes, preços e fotos vêm do catálogo da Central do Pescador. Para trocar uma foto, coloque o arquivo em `public/assets/img/products/` (de preferência quadrado, fundo branco) e mude o campo `image` do produto. Avaliações (`rating`/`reviews`) e preço antigo (`oldPrice`) são opcionais e só aparecem quando preenchidos.
 
 ## Próximos passos para vender de verdade
 
