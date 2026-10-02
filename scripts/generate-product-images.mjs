@@ -5,7 +5,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const OUT = join(dirname(fileURLToPath(import.meta.url)), "..", "assets", "img", "products");
+const OUT = join(dirname(fileURLToPath(import.meta.url)), "..", "public", "assets", "img", "products");
 mkdirSync(OUT, { recursive: true });
 
 let uid = 0;

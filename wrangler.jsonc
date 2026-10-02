@@ -1,0 +1,9 @@
+// Publicação na Cloudflare (Workers com arquivos estáticos).
+// O deploy roda `npx wrangler deploy` a cada push no GitHub.
+{
+  "name": "fishingspirit",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public"
+  }
+}
