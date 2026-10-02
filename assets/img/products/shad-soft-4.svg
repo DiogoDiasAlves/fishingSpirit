@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="42%" r="70%">
+    <stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#e6efff"/><stop offset="1" stop-color="#c9dcfb"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="10"/></filter>
+  <filter id="drop" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0a2a66" flood-opacity=".22"/></filter>
+  <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f7fb"/><stop offset=".5" stop-color="#9aa6b8"/><stop offset="1" stop-color="#5d6878"/></linearGradient>
+  <linearGradient id="g11" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+</defs>
+<rect width="600" height="600" fill="url(#bg)"/>
+<g opacity=".35" fill="none" stroke="#9cc0ff" stroke-width="2">
+  <path d="M0 520 Q75 505 150 520 T300 520 T450 520 T600 520"/>
+  <path d="M0 548 Q75 533 150 548 T300 548 T450 548 T600 548"/>
+</g>
+<ellipse cx="300" cy="480" rx="190" ry="16" fill="#0a2a66" opacity=".16" filter="url(#soft)"/>
+<g filter="url(#drop)">
+  <path d="M120 300 C150 262 300 250 380 266 L380 334 C300 350 150 338 120 300 Z" fill="url(#g11)" stroke="#0b1530" stroke-width="4"/>
+  <path d="M126 300 C110 286 90 262 70 250 C60 290 60 312 70 350 C90 338 110 314 126 300 Z" fill="#7dd3fc" stroke="#0b1530" stroke-width="4"/>
+  <path d="M160 282 C230 268 300 264 370 272" stroke="#fff" stroke-opacity=".5" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M200 270 v60 M240 266 v68 M280 264 v72 M320 264 v72" stroke="#0b1530" stroke-opacity=".18" stroke-width="3"/>
+  <path d="M376 250 C450 236 500 270 500 300 C500 330 450 364 376 350 Z" fill="#1a6dff" stroke="#0b1530" stroke-width="4"/>
+  <path d="M396 262 C440 254 474 270 484 288" stroke="#fff" stroke-opacity=".5" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="452" cy="292" r="14" fill="#f5c518" stroke="#1b1b1b" stroke-width="3"/>
+<circle cx="454" cy="292" r="6.3" fill="#111"/><circle cx="447.8" cy="287.1" r="3.08" fill="#fff"/>
+  <path d="M420 350 C420 410 330 420 320 360 l14 10" fill="none" stroke="#4b5563" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="500" cy="300" r="9" fill="none" stroke="#6b7686" stroke-width="4"/></g>
+</svg>

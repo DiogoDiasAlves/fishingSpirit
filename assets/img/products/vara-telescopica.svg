@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="42%" r="70%">
+    <stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#e6efff"/><stop offset="1" stop-color="#c9dcfb"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="10"/></filter>
+  <filter id="drop" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0a2a66" flood-opacity=".22"/></filter>
+  <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f7fb"/><stop offset=".5" stop-color="#9aa6b8"/><stop offset="1" stop-color="#5d6878"/></linearGradient>
+  <linearGradient id="g14" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1d1f24"/><stop offset=".6" stop-color="#3d8bff"/><stop offset="1" stop-color="#1d1f24"/></linearGradient>
+</defs>
+<rect width="600" height="600" fill="url(#bg)"/>
+<g opacity=".35" fill="none" stroke="#9cc0ff" stroke-width="2">
+  <path d="M0 520 Q75 505 150 520 T300 520 T450 520 T600 520"/>
+  <path d="M0 548 Q75 533 150 548 T300 548 T450 548 T600 548"/>
+</g>
+<ellipse cx="300" cy="480" rx="190" ry="16" fill="#0a2a66" opacity=".16" filter="url(#soft)"/>
+<g filter="url(#drop)">
+  <line x1="90" y1="520" x2="540" y2="70" stroke="url(#g14)" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="292.5" cy="317.5" r="7" fill="#3d8bff"/><circle cx="369" cy="241" r="7" fill="#3d8bff"/><circle cx="441" cy="169" r="7" fill="#3d8bff"/>
+  <line x1="80" y1="530" x2="185" y2="425" stroke="#1d1f24" stroke-width="22" stroke-linecap="round"/>
+  <line x1="200" y1="410" x2="245" y2="365" stroke="#9aa6b8" stroke-width="20"/>
+  <line x1="208" y1="402" x2="236" y2="374" stroke="#3d8bff" stroke-width="22"/>
+  <line x1="250" y1="360" x2="290" y2="320" stroke="#1d1f24" stroke-width="16" stroke-linecap="round"/>
+  <line x1="290" y1="320" x2="300" y2="310" stroke="#3d8bff" stroke-width="12"/>
+  <g transform="translate(279 331) rotate(-45)"><path d="M0 0 v14" stroke="#6b7686" stroke-width="3"/><circle cx="0" cy="18.32" r="5.32" fill="none" stroke="#6b7686" stroke-width="3"/></g><g transform="translate(337.5 272.5) rotate(-45)"><path d="M0 0 v14" stroke="#6b7686" stroke-width="3"/><circle cx="0" cy="17.8" r="4.8" fill="none" stroke="#6b7686" stroke-width="3"/></g><g transform="translate(387 223) rotate(-45)"><path d="M0 0 v14" stroke="#6b7686" stroke-width="3"/><circle cx="0" cy="17.36" r="4.359999999999999" fill="none" stroke="#6b7686" stroke-width="3"/></g><g transform="translate(432 178) rotate(-45)"><path d="M0 0 v14" stroke="#6b7686" stroke-width="3"/><circle cx="0" cy="16.96" r="3.96" fill="none" stroke="#6b7686" stroke-width="3"/></g><g transform="translate(472.5 137.5) rotate(-45)"><path d="M0 0 v14" stroke="#6b7686" stroke-width="3"/><circle cx="0" cy="16.6" r="3.6" fill="none" stroke="#6b7686" stroke-width="3"/></g><g transform="translate(508.5 101.5) rotate(-45)"><path d="M0 0 v14" stroke="#6b7686" stroke-width="3"/><circle cx="0" cy="16.28" r="3.28" fill="none" stroke="#6b7686" stroke-width="3"/></g>
+  <text x="355" y="232" transform="rotate(-45 355 232)" font-family="Arial Black,Arial" font-size="13" font-weight="900" fill="#3d8bff" letter-spacing="2">FISHING SPIRIT</text></g>
+</svg>
